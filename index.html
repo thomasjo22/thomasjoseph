@@ -1,8 +1,16 @@
-<html lang="en"><plasmo-csui id="g0-textarea-recorder"></plasmo-csui><head></head><body><plasmo-csui id="g0-textarea-recorder"></plasmo-csui>
+<!DOCTYPE html>
+<html lang="en">
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Thomas Joseph — Author &amp; Psychology Student</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<title>Thomas Joseph — Author & Psychology Student</title>
+<meta name="description" content="Thomas Joseph is a young Egyptian novelist studying psychology. Author of the debut crime novel 'The Crime of the Thanaweya Amma' (جريمة الثانوية العامة), published by Dar El Shorouk.">
+<meta name="author" content="Thomas Joseph">
+<meta property="og:title" content="Thomas Joseph — Author & Psychology Student">
+<meta property="og:description" content="Stories that heal, words that transform. Debut novel: The Crime of the Thanaweya Amma.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✒️</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
     --forest: #1a3a2a;
@@ -15,6 +23,7 @@
     --text-dark: #2c2c2c;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
   body {
     font-family: 'Montserrat', sans-serif;
     color: var(--text-dark);
@@ -23,6 +32,8 @@
     overflow-x: hidden;
   }
   h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 500; }
+  ::selection { background: var(--gold); color: var(--forest); }
+  section { scroll-margin-top: 70px; }
 
   /* NAVIGATION */
   nav {
@@ -87,13 +98,9 @@
     font-family: 'Montserrat', sans-serif; font-weight: 500; border: none;
     display: inline-block;
   }
-  .btn-primary {
-    background: var(--gold); color: var(--forest);
-  }
+  .btn-primary { background: var(--gold); color: var(--forest); }
   .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
-  .btn-outline {
-    background: transparent; color: var(--gold); border: 1px solid var(--gold);
-  }
+  .btn-outline { background: transparent; color: var(--gold); border: 1px solid var(--gold); }
   .btn-outline:hover { background: var(--gold); color: var(--forest); }
   .hero-image {
     position: relative; display: flex; justify-content: center; align-items: center;
@@ -117,12 +124,8 @@
     color: var(--gold); text-transform: uppercase; letter-spacing: 4px;
     font-size: 0.75rem; display: block; margin-bottom: 12px;
   }
-  .section-header h2 {
-    font-size: 2.8rem; color: var(--forest); margin-bottom: 16px;
-  }
-  .section-header p {
-    color: #666; max-width: 600px; margin: 0 auto; font-size: 1.05rem;
-  }
+  .section-header h2 { font-size: 2.8rem; color: var(--forest); margin-bottom: 16px; }
+  .section-header p { color: #666; max-width: 600px; margin: 0 auto; font-size: 1.05rem; }
 
   /* ABOUT */
   .about { background: var(--white); position: relative; }
@@ -135,18 +138,10 @@
     width: 100%; border-radius: 4px;
     box-shadow: 0 20px 50px rgba(0,0,0,0.1);
   }
-  .about-text h3 {
-    font-size: 2.2rem; color: var(--forest); margin-bottom: 20px;
-  }
-  .about-text p {
-    color: #555; margin-bottom: 20px; font-size: 1rem;
-  }
-  .credentials {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 30px;
-  }
-  .cred-item {
-    display: flex; align-items: flex-start; gap: 12px;
-  }
+  .about-text h3 { font-size: 2.2rem; color: var(--forest); margin-bottom: 20px; }
+  .about-text p { color: #555; margin-bottom: 20px; font-size: 1rem; }
+  .credentials { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 30px; }
+  .cred-item { display: flex; align-items: flex-start; gap: 12px; }
   .cred-icon {
     width: 44px; height: 44px; border-radius: 50%;
     background: var(--forest); color: var(--gold);
@@ -222,9 +217,7 @@
   .book-text h2 { font-size: 2.6rem; color: var(--forest); margin-bottom: 20px; line-height: 1.15; }
   .book-text h2 span { color: var(--gold); font-style: italic; }
   .book-text p { color: #555; margin-bottom: 18px; }
-  .book-links {
-    display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px;
-  }
+  .book-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
   .book-link-btn {
     padding: 12px 28px; font-size: 0.8rem;
     text-transform: uppercase; letter-spacing: 1.5px;
@@ -232,23 +225,97 @@
     border-radius: 0; transition: all 0.3s; display: inline-flex;
     align-items: center; gap: 8px;
   }
-  .book-link-btn.goodreads {
-    background: #372213; color: #f4f1ea; border: 1px solid #372213;
-  }
+  .book-link-btn.goodreads { background: #372213; color: #f4f1ea; border: 1px solid #372213; }
   .book-link-btn.goodreads:hover { background: #4a2f1a; transform: translateY(-2px); }
-  .book-link-btn.store {
-    background: var(--gold); color: var(--forest); border: 1px solid var(--gold);
-  }
+  .book-link-btn.store { background: var(--gold); color: var(--forest); border: 1px solid var(--gold); }
   .book-link-btn.store:hover { background: var(--gold-light); transform: translateY(-2px); }
 
+  /* BLOG / WRITINGS */
+  .blog { background: var(--white); }
+  .blog-grid {
+    max-width: 1200px; margin: 0 auto;
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;
+  }
+  .blog-card {
+    background: var(--cream); border: 1px solid var(--cream-dark);
+    padding: 32px 28px; cursor: pointer;
+    display: flex; flex-direction: column;
+    transition: all 0.4s ease; position: relative;
+  }
+  .blog-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--gold);
+    box-shadow: 0 20px 40px rgba(26,58,42,0.12);
+  }
+  .blog-tag {
+    display: inline-block; width: fit-content;
+    font-size: 0.68rem; text-transform: uppercase; letter-spacing: 2px;
+    color: var(--forest); background: rgba(201,169,110,0.25);
+    padding: 4px 12px; margin-bottom: 16px; font-weight: 600;
+  }
+  .blog-card h3 {
+    font-size: 1.35rem; color: var(--forest);
+    margin-bottom: 12px; line-height: 1.3;
+  }
+  .blog-card .blog-excerpt {
+    color: #666; font-size: 0.9rem; font-weight: 300;
+    margin-bottom: 20px; flex-grow: 1;
+  }
+  .blog-meta {
+    display: flex; justify-content: space-between; align-items: center;
+    border-top: 1px solid var(--cream-dark); padding-top: 16px;
+  }
+  .blog-meta .blog-date { font-size: 0.78rem; color: #999; text-transform: uppercase; letter-spacing: 1px; }
+  .blog-meta .blog-readmore { font-size: 0.78rem; color: var(--gold); text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600; }
+  .blog-card:hover .blog-readmore { color: var(--forest); }
+  .blog-empty {
+    grid-column: 1 / -1; text-align: center; color: #999;
+    font-style: italic; padding: 40px 0;
+  }
+
+  /* BLOG READER OVERLAY */
+  .reader-overlay {
+    display: none; position: fixed; inset: 0; z-index: 2000;
+    background: rgba(15,31,22,0.85); backdrop-filter: blur(6px);
+    align-items: center; justify-content: center; padding: 30px;
+  }
+  .reader-overlay.open { display: flex; }
+  .reader-box {
+    background: var(--white); max-width: 760px; width: 100%;
+    max-height: 85vh; overflow-y: auto;
+    padding: 60px 70px; position: relative;
+    box-shadow: 0 40px 80px rgba(0,0,0,0.4);
+  }
+  .reader-close {
+    position: absolute; top: 20px; right: 24px;
+    background: none; border: none; font-size: 1.6rem;
+    color: var(--forest); cursor: pointer; line-height: 1;
+    transition: color 0.3s;
+  }
+  .reader-close:hover { color: var(--gold); }
+  .reader-tag {
+    display: inline-block; font-size: 0.68rem; text-transform: uppercase;
+    letter-spacing: 2px; color: var(--forest);
+    background: rgba(201,169,110,0.25); padding: 4px 12px;
+    margin-bottom: 20px; font-weight: 600;
+  }
+  .reader-box h2 { font-size: 2.2rem; color: var(--forest); margin-bottom: 10px; line-height: 1.2; }
+  .reader-date { font-size: 0.8rem; color: #999; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 30px; display: block; }
+  .reader-content p { color: #444; margin-bottom: 18px; font-size: 1rem; line-height: 1.9; }
+  .reader-content p:first-of-type::first-letter {
+    font-family: 'Playfair Display', serif; font-size: 3.2rem;
+    color: var(--gold); float: left; line-height: 1;
+    padding-right: 10px; padding-top: 4px;
+  }
+
   /* TESTIMONIALS */
-  .testimonials { background: var(--white); }
+  .testimonials { background: var(--cream); }
   .testimonials-grid {
     max-width: 1200px; margin: 0 auto;
     display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;
   }
   .testimonial-card {
-    background: var(--cream); padding: 40px 30px;
+    background: var(--white); padding: 40px 30px;
     border-left: 3px solid var(--gold); position: relative;
   }
   .testimonial-card::before {
@@ -260,9 +327,7 @@
     color: #555; font-style: italic; margin-bottom: 24px;
     position: relative; z-index: 1; font-size: 0.95rem;
   }
-  .testimonial-author {
-    display: flex; align-items: center; gap: 14px;
-  }
+  .testimonial-author { display: flex; align-items: center; gap: 14px; }
   .testimonial-author img {
     width: 48px; height: 48px; border-radius: 50%;
     object-fit: cover; border: 2px solid var(--gold);
@@ -286,6 +351,7 @@
     border: 1px solid var(--gold); color: var(--gold);
     display: flex; align-items: center; justify-content: center;
     text-decoration: none; transition: all 0.3s;
+    font-size: 0.75rem; font-weight: 600; letter-spacing: 0.5px;
   }
   .contact-info .socials a:hover { background: var(--gold); color: var(--forest); }
   .contact-form { display: flex; flex-direction: column; gap: 18px; }
@@ -297,6 +363,9 @@
   .contact-form input:focus, .contact-form textarea:focus { border-color: var(--gold); }
   .contact-form input::placeholder, .contact-form textarea::placeholder { color: rgba(255,255,255,0.4); }
   .contact-form textarea { min-height: 120px; resize: vertical; }
+  .form-status { font-size: 0.85rem; min-height: 1.2em; margin: 0; }
+  .form-status.success { color: var(--gold-light); }
+  .form-status.error { color: #e88; }
 
   /* FOOTER */
   footer {
@@ -305,51 +374,10 @@
     letter-spacing: 1px;
   }
 
-  /* EDITABLE HIGHLIGHT */
-  [contenteditable="true"] {
-    outline: none; border-radius: 4px;
-    transition: background 0.2s, box-shadow 0.2s;
-  }
-  [contenteditable="true"]:hover {
-    background: rgba(201,169,110,0.08);
-    box-shadow: 0 0 0 2px rgba(201,169,110,0.2);
-  }
-  [contenteditable="true"]:focus {
-    background: rgba(201,169,110,0.12);
-    box-shadow: 0 0 0 2px var(--gold);
-  }
-
-  /* IMAGE HINTS */
-  .img-replace-hint {
-    font-size: 0.7rem; color: #888; text-align: center;
-    margin-top: 6px; font-style: italic;
-  }
-
-  /* EDIT TOOLBAR */
-  .edit-toolbar {
-    position: fixed; bottom: 24px; right: 24px; z-index: 9999;
-    background: var(--forest); border: 1px solid var(--gold);
-    padding: 12px 20px; border-radius: 8px;
-    display: flex; align-items: center; gap: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-  }
-  .edit-toolbar span {
-    color: var(--gold); font-size: 0.75rem; text-transform: uppercase;
-    letter-spacing: 1px; font-weight: 500;
-  }
-  .edit-toolbar button {
-    background: var(--gold); color: var(--forest); border: none;
-    padding: 8px 18px; font-family: 'Montserrat', sans-serif;
-    font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;
-    cursor: pointer; border-radius: 4px; font-weight: 600;
-    transition: all 0.3s;
-  }
-  .edit-toolbar button:hover { background: var(--gold-light); }
-
   /* RESPONSIVE */
   @media (max-width: 1024px) {
     .hero-container, .about-container, .book-container, .contact-container { grid-template-columns: 1fr; }
-    .news-grid, .testimonials-grid { grid-template-columns: 1fr; }
+    .news-grid, .testimonials-grid, .blog-grid { grid-template-columns: 1fr; }
     .hero { padding: 140px 30px 60px; text-align: center; }
     .hero h1 { font-size: 2.8rem; }
     .hero-desc { margin: 0 auto 36px; }
@@ -361,20 +389,22 @@
     .nav-links { display: none; }
     .section-header h2 { font-size: 2.2rem; }
     .book-links { justify-content: center; }
+    .reader-box { padding: 40px 28px; }
+    .reader-box h2 { font-size: 1.7rem; }
   }
 </style>
 <base target="_blank">
-<base target="_blank">
-
-
+</head>
+<body>
 
 <!-- Navigation -->
 <nav id="navbar" class="scrolled">
-  <a href="#" class="logo" contenteditable="true">Thomas Joseph</a>
+  <a href="#" class="logo">Thomas Joseph</a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#news">News</a></li>
     <li><a href="#book">My Book</a></li>
+    <li><a href="#blog">Writings</a></li>
     <li><a href="#testimonials">Reviews</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -384,17 +414,17 @@
 <section class="hero">
   <div class="hero-container">
     <div class="hero-text">
-      <span class="hero-label" contenteditable="true">Author &amp; Psychology Student</span>
-      <h1 contenteditable="true">Stories That Heal,<br>Words That <span>Transform</span></h1>
-      <p class="hero-desc" contenteditable="true">Thomas Joseph is a young Egyptian novelist studying psychology. His debut novel "The Crime of the Thanaweya Amma" explores the human psyche through a gripping crime narrative.</p>
+      <span class="hero-label">Author &amp; Psychology Student</span>
+      <h1>Stories That Heal,<br>Words That <span>Transform</span></h1>
+      <p class="hero-desc">Thomas Joseph is a young Egyptian novelist studying psychology. His debut novel "The Crime of the Thanaweya Amma" explores the human psyche through a gripping crime narrative.</p>
       <div class="hero-btns">
-        <a href="#contact" class="btn btn-primary" contenteditable="true">Contact Me</a>
-        <a href="#book" class="btn btn-outline" contenteditable="true">Read My Novel</a>
+        <a href="#contact" class="btn btn-primary">Contact Me</a>
+        <a href="#book" class="btn btn-outline">Read My Novel</a>
       </div>
     </div>
     <div class="hero-image">
-      <img id="hero-img" src="https://i.postimg.cc/XYCs3Cdc/624703860-1302923861868423-1881177376527678929-n.jpg" alt="Thomas Joseph">
-</div>
+      <img src="https://i.postimg.cc/XYCs3Cdc/624703860-1302923861868423-1881177376527678929-n.jpg" alt="Thomas Joseph, author portrait">
+    </div>
   </div>
 </section>
 
@@ -402,40 +432,40 @@
 <section class="about" id="about">
   <div class="about-container">
     <div class="about-image">
-      <img id="about-img" src="https://i.postimg.cc/YqX5jYvy/Thomas-1.jpg" alt="About Photo">
-</div>
+      <img src="https://i.postimg.cc/YqX5jYvy/Thomas-1.jpg" alt="Thomas Joseph portrait">
+    </div>
     <div class="about-text">
-      <span class="label" style="color:var(--gold);text-transform:uppercase;letter-spacing:3px;font-size:0.75rem;display:block;margin-bottom:16px;" contenteditable="true">About Me</span>
-      <h3 contenteditable="true"><br></h3>
-      <p contenteditable="true">Thomas Joseph is a young Egyptian novelist studying psychology at the British University in Egypt and London South Bank University. His writing centers on the human psyche and its inner conflicts, blending literary style with psychological insight to craft contemporary narratives.</p>
-      <p contenteditable="true">His debut novel, "The Crime of the Thanaweya Amma" (جريمة الثانوية العامة), marks his first work of fiction with Dar El Shorouk — one of Egypt's most prestigious publishing houses.</p>
+      <span class="label" style="color:var(--gold);text-transform:uppercase;letter-spacing:3px;font-size:0.75rem;display:block;margin-bottom:16px;">About Me</span>
+      <h3>Thomas Joseph</h3>
+      <p>Thomas Joseph is a young Egyptian novelist studying psychology at the British University in Egypt and London South Bank University. His writing centers on the human psyche and its inner conflicts, blending literary style with psychological insight to craft contemporary narratives.</p>
+      <p>His debut novel, "The Crime of the Thanaweya Amma" (جريمة الثانوية العامة), marks his first work of fiction with Dar El Shorouk — one of Egypt's most prestigious publishing houses.</p>
       <div class="credentials">
         <div class="cred-item">
           <div class="cred-icon">🎓</div>
           <div>
-            <h4 contenteditable="true">Psychology Student</h4>
-            <p contenteditable="true">BSc Psychology, BUE &amp; LSBU</p>
+            <h4>Psychology Student</h4>
+            <p>BSc Psychology, BUE &amp; LSBU</p>
           </div>
         </div>
         <div class="cred-item">
           <div class="cred-icon">🎧</div>
           <div>
-            <h4 contenteditable="true">Trained Listener</h4>
-            <p contenteditable="true">5+ Years Experience</p>
+            <h4>Trained Listener</h4>
+            <p>5+ Years Experience</p>
           </div>
         </div>
         <div class="cred-item">
           <div class="cred-icon">📚</div>
           <div>
-            <h4 contenteditable="true">Published Author</h4>
-            <p contenteditable="true">Dar El Shorouk</p>
+            <h4>Published Author</h4>
+            <p>Dar El Shorouk</p>
           </div>
         </div>
         <div class="cred-item">
           <div class="cred-icon">🌍</div>
           <div>
-            <h4 contenteditable="true">Multilingual</h4>
-            <p contenteditable="true">English, Arabic &amp; French</p>
+            <h4>Multilingual</h4>
+            <p>English, Arabic &amp; French</p>
           </div>
         </div>
       </div>
@@ -446,14 +476,13 @@
 <!-- News Section -->
 <section class="news" id="news">
   <div class="section-header">
-    <span class="label" contenteditable="true">Latest Updates</span>
-    <h2 contenteditable="true">News &amp; Articles</h2>
-    <p contenteditable="true">Media features, interviews, and announcements about my work.</p>
+    <span class="label">Latest Updates</span>
+    <h2>News &amp; Articles</h2>
+    <p>Media features, interviews, and announcements about my work.</p>
   </div>
   <div class="news-grid">
-    <!-- News Card 1 -->
-    <a href="https://www.nogoumfm.net/2026/08/%D9%84%D8%AF%D9%8A-%D8%A3%D9%82%D9%88%D8%A7%D9%84-%D8%A3%D8%AE%D8%B1%D9%89-%D8%A7%D9%84%D9%83%D8%A7%D8%AA%D8%A8-%D8%AA%D9%88%D9%85%D8%A7%D8%B3-%D8%AC%D9%88%D8%B2%D9%8A%D9%81-%D8%B9%D9%86/" class="news-card" target="_blank">
-      <img class="news-card-image" src="https://i.postimg.cc/PxxZXg93/780673928-4459573807643927-4760091380092719215-n.jpg" alt="Radio Interview">
+    <a href="https://www.nogoumfm.net/2026/08/%D9%84%D8%AF%D9%8A-%D8%A3%D9%82%D9%88%D8%A7%D9%84-%D8%A3%D8%AE%D8%B1%D9%89-%D8%A7%D9%84%D9%83%D8%A7%D8%AA%D8%A8-%D8%AA%D9%88%D9%85%D8%A7%D8%B3-%D8%AC%D9%88%D8%B2%D9%8A%D9%81-%D8%B9%D9%86/" class="news-card" target="_blank" rel="noopener">
+      <img class="news-card-image" src="https://i.postimg.cc/PxxZXg93/780673928-4459573807643927-4760091380092719215-n.jpg" alt="Radio interview on Nogoum FM">
       <div class="news-card-body">
         <span class="news-date">August 2026</span>
         <h3>Radio Interview on Nogoum FM</h3>
@@ -461,9 +490,8 @@
         <span class="news-readmore">Read Article →</span>
       </div>
     </a>
-    <!-- News Card 2 -->
-    <a href="https://www.shorouknews.com/mobile/news/view.aspx?cdate=02022026&amp;id=11de3803-918b-4893-99e7-a228680f4259" class="news-card" target="_blank">
-      <img class="news-card-image" src="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=400&amp;h=250&amp;fit=crop" alt="Shorouk News">
+    <a href="https://www.shorouknews.com/mobile/news/view.aspx?cdate=02022026&amp;id=11de3803-918b-4893-99e7-a228680f4259" class="news-card" target="_blank" rel="noopener">
+      <img class="news-card-image" src="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=400&amp;h=250&amp;fit=crop" alt="Shorouk News interview">
       <div class="news-card-body">
         <span class="news-date">February 2026</span>
         <h3>In-Depth Interview with Shorouk News</h3>
@@ -471,9 +499,8 @@
         <span class="news-readmore">Read Article →</span>
       </div>
     </a>
-    <!-- News Card 3 -->
-    <a href="https://www.shorouknews.com/mobile/news/view.aspx?cdate=01022026&amp;id=87393fb8-a82e-4c30-8022-f504459dfb2e" class="news-card" target="_blank">
-      <img class="news-card-image" src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=400&amp;h=250&amp;fit=crop" alt="Book Fair">
+    <a href="https://www.shorouknews.com/mobile/news/view.aspx?cdate=01022026&amp;id=87393fb8-a82e-4c30-8022-f504459dfb2e" class="news-card" target="_blank" rel="noopener">
+      <img class="news-card-image" src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=400&amp;h=250&amp;fit=crop" alt="Cairo International Book Fair">
       <div class="news-card-body">
         <span class="news-date">February 2026</span>
         <h3>Cairo Book Fair Feature</h3>
@@ -488,59 +515,68 @@
 <section class="book-section" id="book">
   <div class="book-container">
     <div class="book-image">
-      <span class="book-badge" contenteditable="true">New Release</span>
-      <img id="book-img" src="https://i.postimg.cc/VN4ncfZy/630889919-1309075227919953-5617277088857668632-n.jpg" alt="Book Cover">
-</div>
+      <span class="book-badge">New Release</span>
+      <img src="https://i.postimg.cc/VN4ncfZy/630889919-1309075227919953-5617277088857668632-n.jpg" alt="Book cover of The Crime of the Thanaweya Amma">
+    </div>
     <div class="book-text">
-      <span class="label" contenteditable="true">My Latest Book</span>
-      <h2 contenteditable="true">جريمة الثانوية العامة</h2>
-      <p contenteditable="true">Have you ever imagined walking into an exam terrified of failing it, only to find yourself entangled in a murder instead? That's exactly what happens to Zein. On the very first day of his final high school exams, he becomes the prime suspect in the murder of a fellow student.</p>
-      <p contenteditable="true">Alone and cornered by accusation, Zein refuses to give up. He knows that if he wants to survive, he has to solve the mystery himself. But the closer he gets to the truth, the more he discovers that the school he thought he knew is riddled with dark secrets.</p>
-      <p contenteditable="true">Behind its veil of crime and mystery, the novel offers a precise dissection of the human psyche when stripped bare by fear. It's a journey that proves the most important lesson of your final year isn't found in a high exam score, it's discovering the monster that can live inside the people closest to you. That is the real boogeyman.</p>
-
+      <span class="label">My Latest Book</span>
+      <h2>جريمة الثانوية العامة</h2>
+      <p>Have you ever imagined walking into an exam terrified of failing it, only to find yourself entangled in a murder instead? That's exactly what happens to Zein. On the very first day of his final high school exams, he becomes the prime suspect in the murder of a fellow student.</p>
+      <p>Alone and cornered by accusation, Zein refuses to give up. He knows that if he wants to survive, he has to solve the mystery himself. But the closer he gets to the truth, the more he discovers that the school he thought he knew is riddled with dark secrets.</p>
+      <p>Behind its veil of crime and mystery, the novel offers a precise dissection of the human psyche when stripped bare by fear. It's a journey that proves the most important lesson of your final year isn't found in a high exam score, it's discovering the monster that can live inside the people closest to you. That is the real boogeyman.</p>
       <div class="book-links">
-        <a href="https://www.goodreads.com/book/show/246999690" class="book-link-btn goodreads" target="_blank">📖 Goodreads</a>
-        <a href="https://www.shoroukbookstores.com/books/view.aspx?id=6f8c2a4f-0543-4026-ba25-3788560b52d6&amp;srsltid=AfmBOoqFa8l4cE18eFRKXTgGs4RTMv3gzI-gYFEHG69T-skmT-sQDqsA" class="book-link-btn store" target="_blank">🏪 Dar El Shorouk</a>
+        <a href="https://www.goodreads.com/book/show/246999690" class="book-link-btn goodreads" target="_blank" rel="noopener">📖 Goodreads</a>
+        <a href="https://www.shoroukbookstores.com/books/view.aspx?id=6f8c2a4f-0543-4026-ba25-3788560b52d6" class="book-link-btn store" target="_blank" rel="noopener">🏪 Dar El Shorouk</a>
       </div>
-</div>
+    </div>
   </div>
+</section>
+
+<!-- Writings / Blog Section -->
+<section class="blog" id="blog">
+  <div class="section-header">
+    <span class="label">From My Desk</span>
+    <h2>Writings &amp; Reflections</h2>
+    <p>Essays, reflections, and pieces from my own pen — on writing, psychology, and everything in between.</p>
+  </div>
+  <div class="blog-grid" id="blog-grid"><!-- Posts are rendered here automatically --></div>
 </section>
 
 <!-- Testimonials Section -->
 <section class="testimonials" id="testimonials">
   <div class="section-header">
-    <span class="label" contenteditable="true">Reader Reviews</span>
-    <h2 contenteditable="true">What People Say</h2>
-    <p contenteditable="true">Real readers sharing their experience with the novel.</p>
+    <span class="label">Reader Reviews</span>
+    <h2>What People Say</h2>
+    <p>Real readers sharing their experience with the novel.</p>
   </div>
   <div class="testimonials-grid">
     <div class="testimonial-card">
-      <p contenteditable="true">I loved how precisely the main characters and their internal conflicts were drawn, especially Zein and Mario. The novel is rich with important social issues that the author handles skillfully.</p>
+      <p>I loved how precisely the main characters and their internal conflicts were drawn, especially Zein and Mario. The novel is rich with important social issues that the author handles skillfully.</p>
       <div class="testimonial-author">
-        <img id="review1-img" src="https://i.postimg.cc/LX6kqYgR/images.png" alt="Noha Daoud">
+        <img src="https://i.postimg.cc/LX6kqYgR/images.png" alt="Noha Daoud">
         <div>
-          <h4 contenteditable="true">Noha Daoud</h4>
-          <span contenteditable="true">Crime Fiction Author</span>
+          <h4>Noha Daoud</h4>
+          <span>Crime Fiction Author</span>
         </div>
       </div>
     </div>
     <div class="testimonial-card">
-      <p contenteditable="true">The novel is clever in its choice of a crime framework, but its real strength lies not in the crime itself, but in the social and psychological issues explored through it. The author tackles complex themes without ever feeling preachy.</p>
+      <p>The novel is clever in its choice of a crime framework, but its real strength lies not in the crime itself, but in the social and psychological issues explored through it. The author tackles complex themes without ever feeling preachy.</p>
       <div class="testimonial-author">
-        <img id="review2-img" src="https://i.postimg.cc/LX6kqYgR/images.png" alt="Habiba">
+        <img src="https://i.postimg.cc/LX6kqYgR/images.png" alt="Habiba">
         <div>
-          <h4 contenteditable="true">Habiba</h4>
-          <span contenteditable="true">Reader</span>
+          <h4>Habiba</h4>
+          <span>Reader</span>
         </div>
       </div>
     </div>
     <div class="testimonial-card">
-      <p contenteditable="true">A beautiful and engaging novel by young author Thomas Joseph. Although the story revolves around a crime, it isn't focused on the crime alone , it goes into deep psychological territory and tackles many issues that young people can relate to. By the end, I finished the novel with tears in my eyes.</p>
+      <p>A beautiful and engaging novel by young author Thomas Joseph. Although the story revolves around a crime, it isn't focused on the crime alone — it goes into deep psychological territory and tackles many issues that young people can relate to. By the end, I finished the novel with tears in my eyes.</p>
       <div class="testimonial-author">
-        <img id="review3-img" src="https://i.postimg.cc/LX6kqYgR/images.png" alt="Mariam">
+        <img src="https://i.postimg.cc/LX6kqYgR/images.png" alt="Mariam">
         <div>
-          <h4 contenteditable="true">Mariam</h4>
-          <span contenteditable="true">Reader</span>
+          <h4>Mariam</h4>
+          <span>Reader</span>
         </div>
       </div>
     </div>
@@ -550,45 +586,135 @@
 <!-- Contact Section -->
 <section class="contact" id="contact">
   <div class="section-header">
-    <span class="label" contenteditable="true">Get In Touch</span>
-    <h2 contenteditable="true">Contact Me</h2>
-    <p contenteditable="true">Reach out for collaborations, interviews, or just to say hello.</p>
+    <span class="label">Get In Touch</span>
+    <h2>Contact Me</h2>
+    <p>Reach out for collaborations, interviews, or just to say hello.</p>
   </div>
   <div class="contact-container">
     <div class="contact-info">
-      <h3 contenteditable="true">Contact Information</h3>
-      <p contenteditable="true">📸 Instagram: @thomasjooseph</p>
-      <p contenteditable="true">💼 LinkedIn: /in/thomasjoseph22</p>
-      <p contenteditable="true">✉️ thomas.joseph2203@gmail.com</p>
+      <h3>Contact Information</h3>
+      <p>📸 Instagram: @thomasjooseph</p>
+      <p>💼 LinkedIn: /in/thomasjoseph22</p>
+      <p>✉️ thomas.joseph2203@gmail.com</p>
       <div class="socials">
-        <a href="https://instagram.com/thomasjooseph" title="Instagram" target="_blank">IG</a>
-        <a href="https://linkedin.com/in/thomasjoseph22" title="LinkedIn" target="_blank">LI</a>
-        <a href="#" title="Twitter">X</a>
-        <a href="#" title="YouTube">YT</a>
+        <a href="https://instagram.com/thomasjooseph" title="Instagram" target="_blank" rel="noopener">IG</a>
+        <a href="https://linkedin.com/in/thomasjoseph22" title="LinkedIn" target="_blank" rel="noopener">LI</a>
       </div>
     </div>
-    <form class="contact-form" onsubmit="event.preventDefault(); alert('Thank you for your message! I will get back to you soon.');">
-      <input type="text" placeholder="Your Name" required="">
-      <input type="email" placeholder="Your Email" required="">
-      <input type="text" placeholder="Subject">
-      <textarea placeholder="Your message..." required=""></textarea>
-      <button type="submit" class="btn btn-primary" style="width:fit-content;">Send Message</button>
+    <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+      <!-- Required: your Web3Forms access key (get a free one at https://web3forms.com — takes 1 minute) -->
+      <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+      <input type="hidden" name="subject" value="New message from your website — thomasjoseph">
+      <input type="hidden" name="from_name" value="Thomas Joseph Website">
+      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="text" name="subject_user" placeholder="Subject">
+      <textarea name="message" placeholder="Your message..." required></textarea>
+      <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+      <button type="submit" class="btn btn-primary" style="width:fit-content;" id="form-btn">Send Message</button>
     </form>
   </div>
 </section>
 
 <!-- Footer -->
 <footer>
-  <p contenteditable="true">© 2026 Thomas Joseph. All rights reserved.</p>
+  <p>© 2026 Thomas Joseph. All rights reserved.</p>
 </footer>
 
-<!-- Edit Toolbar -->
-<div class="edit-toolbar">
-  <span>✏️ Click any text to edit</span>
-  <button onclick="savePage()">💾 Save HTML</button>
+<!-- Blog Post Reader -->
+<div class="reader-overlay" id="reader-overlay">
+  <div class="reader-box" role="dialog" aria-modal="true">
+    <button class="reader-close" id="reader-close" aria-label="Close article">&times;</button>
+    <span class="reader-tag" id="reader-tag"></span>
+    <h2 id="reader-title"></h2>
+    <span class="reader-date" id="reader-date"></span>
+    <div class="reader-content" id="reader-content"></div>
+  </div>
 </div>
 
 <script>
+  /* ============================================================
+     ✍️  YOUR BLOG POSTS — EDIT HERE
+     ------------------------------------------------------------
+     To publish a new piece, copy one block below, paste it at the
+     TOP of the list (right after "const BLOG_POSTS = ["), change
+     the fields, and save. The site updates automatically.
+     Each "paragraphs" entry is one paragraph. Newest post first.
+     ============================================================ */
+  const BLOG_POSTS = [
+    {
+      title: "Why I Write About Fear",
+      tag: "On Writing",
+      date: "October 2026",
+      excerpt: "Fear is the most honest emotion we have. This is why every story I write begins in the dark.",
+      paragraphs: [
+        "People often ask me why a psychology student would choose crime fiction as his first genre. The answer is simple: fear is the most honest emotion we have. When we are afraid, the masks fall away, and what remains is the truth of who we are.",
+        "In the classroom, I study fear as a mechanism — the amygdala firing, the cortisol rising. But at my desk, I study it as a story. Every character I have ever written became real to me the moment they were afraid.",
+        "The Thanaweya Amma — Egypt's national high school exams — is, for millions of students, the scariest thing in their young lives. That is why I set my first novel there. Not because of the exams themselves, but because of what pressure does to people when they believe their entire future depends on a single number.",
+        "I don't write about monsters to frighten my readers. I write about them so that when my readers meet one — in a classroom, in an office, in a mirror — they will already know his face."
+      ]
+    },
+    {
+      title: "Studying the Mind to Write the Soul",
+      tag: "Psychology",
+      date: "September 2026",
+      excerpt: "What studying psychology at two universities taught me about building characters that feel alive.",
+      paragraphs: [
+        "There is a quiet war in me between the scientist and the storyteller. Psychology asks me to measure the mind. Fiction asks me to listen to it. The secret I have learned is that the two are allies, not enemies.",
+        "Every diagnosis in a textbook is, at its heart, a story. The student who cannot sit an exam without panic is not a case study — he is Zein. The friend who laughs loudest at parties and cannot sleep at night is not a statistic — he is every character I have ever loved writing.",
+        "When I study attachment theory, I am not only preparing for an exam. I am learning why a character betrays his best friend. When I study trauma, I am learning why a character lies to protect someone who hurt him.",
+        "My professors teach me how the mind breaks. My stories teach me how it heals. I hope to spend my life doing both."
+      ]
+    }
+  ];
+  /* ================= END OF BLOG POSTS ================= */
+
+
+  // Render blog cards
+  const blogGrid = document.getElementById('blog-grid');
+  if (BLOG_POSTS.length === 0) {
+    blogGrid.innerHTML = '<p class="blog-empty">New writings coming soon.</p>';
+  } else {
+    BLOG_POSTS.forEach((post, i) => {
+      const card = document.createElement('article');
+      card.className = 'blog-card';
+      card.innerHTML =
+        '<span class="blog-tag"></span>' +
+        '<h3></h3>' +
+        '<p class="blog-excerpt"></p>' +
+        '<div class="blog-meta"><span class="blog-date"></span><span class="blog-readmore">Read →</span></div>';
+      card.querySelector('.blog-tag').textContent = post.tag;
+      card.querySelector('h3').textContent = post.title;
+      card.querySelector('.blog-excerpt').textContent = post.excerpt;
+      card.querySelector('.blog-date').textContent = post.date;
+      card.addEventListener('click', () => openReader(i));
+      blogGrid.appendChild(card);
+    });
+  }
+
+  // Blog reader overlay
+  const overlay = document.getElementById('reader-overlay');
+  function openReader(index) {
+    const post = BLOG_POSTS[index];
+    document.getElementById('reader-tag').textContent = post.tag;
+    document.getElementById('reader-title').textContent = post.title;
+    document.getElementById('reader-date').textContent = post.date;
+    document.getElementById('reader-content').innerHTML =
+      post.paragraphs.map(p => '<p></p>').join('');
+    const ps = document.getElementById('reader-content').querySelectorAll('p');
+    post.paragraphs.forEach((p, i) => ps[i].textContent = p);
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeReader() {
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.getElementById('reader-close').addEventListener('click', closeReader);
+  overlay.addEventListener('click', e => { if (e.target === overlay) closeReader(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeReader(); });
+
   // Navbar scroll effect
   window.addEventListener('scroll', () => {
     const nav = document.getElementById('navbar');
@@ -596,27 +722,40 @@
     else nav.classList.remove('scrolled');
   });
 
-  // Smooth scroll for nav links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
-  });
+  // Contact form — sends real email via Web3Forms
+  const form = document.getElementById('contact-form');
+  const status = document.getElementById('form-status');
+  const formBtn = document.getElementById('form-btn');
 
-  // Save page as HTML
-  function savePage() {
-    const html = document.documentElement.outerHTML;
-    const blob = new Blob([html], { type: 'text/html' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'my-website.html';
-    a.click();
-    URL.revokeObjectURL(url);
-    alert('Your edited website has been saved as "my-website.html"!');
-  }
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    status.className = 'form-status';
+    status.textContent = 'Sending...';
+    formBtn.disabled = true;
+
+    const data = new FormData(form);
+    // Use the visitor's subject if provided
+    if (data.get('subject_user')) data.set('subject', 'Website message: ' + data.get('subject_user'));
+    data.delete('subject_user');
+
+    try {
+      const res = await fetch(form.action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } });
+      const json = await res.json();
+      if (json.success) {
+        status.className = 'form-status success';
+        status.textContent = '✓ Thank you! Your message has been sent. I will reply soon.';
+        form.reset();
+      } else {
+        throw new Error(json.message || 'Something went wrong.');
+      }
+    } catch (err) {
+      status.className = 'form-status error';
+      status.textContent = '✗ Failed to send. Please email me directly at thomas.joseph2203@gmail.com';
+    } finally {
+      formBtn.disabled = false;
+    }
+  });
 </script>
 
-</body></html>
+</body>
+</html>
